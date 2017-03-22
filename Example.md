@@ -7,11 +7,13 @@ All examples shown leverages the core `BunnyBus` [API](http://github.com/xogroup
 
 
 - [Help pages](#help-pages)
-  - [Starting web server with environment variables](#starting-web-server-with-environment-variables)
-  - [Starting docker with environment variables](#starting-docker-with-environment-variables)
-  - [Starting web server with arguments](#starting-web-server-with-arguments)
-  - [Starting docker with arguments](#starting-docker-with-arguments)
-  - [](#)
+- [Starting web server with environment variables](#starting-web-server-with-environment-variables)
+- [Starting docker with environment variables](#starting-docker-with-environment-variables)
+- [Starting web server with arguments](#starting-web-server-with-arguments)
+- [Starting docker with arguments](#starting-docker-with-arguments)
+- [Uploading a new chart to S3](#uploading-a-new-chart-to-s3)
+- [Uploading a new chart to S3 under a `qa` prefix](#uploading-a-new-chart-to-s3-under-a-qa-prefix)
+- [Refreshing the `index.yaml` manifest](#refreshing-the-indexyaml-manifest)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
