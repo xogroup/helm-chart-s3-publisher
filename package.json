@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "lab test",
-    "build-docker": "docker build -t xogroup/helm-chart-s3-publisher -f docker/Dockerfile .",
+    "build-docker": "docker build -t xogroup/helm-chart-s3-publisher .",
     "doctoc": "doctoc API.md && doctoc Example.md"
   },
   "author": "Lam Chan",

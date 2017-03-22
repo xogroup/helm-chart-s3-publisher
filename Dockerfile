@@ -15,10 +15,10 @@ RUN \
     mv /tmp/linux-amd64/helm /usr/local/bin && \
     rm -rf /tmp/linux-amd64 && rm /tmp/helm.tar.gz
 
-ADD ./docker/docker-shell.sh /usr/local/bin/docker-shell
+COPY ./docker/docker-shell.sh /usr/local/bin/docker-shell
 RUN chmod +x /usr/local/bin/docker-shell
 
-ADD ./package.json package.json
+COPY ./package.json package.json
 RUN npm install --production
 
-ADD . $APPDIR
+COPY . $APPDIR
