@@ -3,8 +3,13 @@
   "version": "0.0.1",
   "description": "A publishing agent to push Helm/Chart packages to a Chart repository",
   "main": "lib/index.js",
+  "bin": {
+    "helm-chart-publisher": "lib/commands/index.js"
+  },
   "scripts": {
-    "test": "lab test"
+    "test": "lab test",
+    "build-docker": "docker build -t xogroup/helm-chart-s3-publisher -f docker/Dockerfile .",
+    "doctoc": "doctoc API.md && doctoc Example.md"
   },
   "author": "Lam Chan",
   "license": "BSD-3-Clause",
