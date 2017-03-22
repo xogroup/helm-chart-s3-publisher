@@ -1,6 +1,11 @@
 # helm-chart-s3-publisher
 A web server to broker the upkeeping of chart objects and helm index manifest grooming between your CI build process.  
 
+[![npm version](https://badge.fury.io/js/helm-chart-s3-publisher.svg)](https://badge.fury.io/js/helm-chart-s3-publisher)
+[![Build Status](https://travis-ci.org/xogroup/helm-chart-s3-publisher.svg?branch=master)](https://travis-ci.org/xogroup/helm-chart-s3-publisher)
+[![Known Vulnerabilities](https://snyk.io/test/github/xogroup/helm-chart-s3-publisher/badge.svg)](https://snyk.io/test/github/xogroup/helm-chart-s3-publisher)
+[![NSP Status](https://nodesecurity.io/orgs/xo-group/projects/3a29afda-e691-472c-8bc3-faa441e5e2d3/badge)](https://nodesecurity.io/orgs/xo-group/projects/3a29afda-e691-472c-8bc3-faa441e5e2d3)
+
 Lead Maintainer: [Lam Chan](https://github.com/lamchakchan)
 
 ## Introduction
