@@ -35,6 +35,11 @@ docker run -d xogroup/helm-chart-s3-publisher
 
 See the [API Reference](http://github.com/xogroup/helm-chart-s3-publisher/blob/master/API.md).
 
+### API
+
+Check out the [Examples]
+(http://github.com/xogroup/helm-chart-s3-publisher/blob/master/Example.md).
+
 ## Contributing
 
 We love community and contributions! Please check out our [guidelines](http://github.com/xogroup/helm-chart-s3-publisher/blob/master/.github/CONTRIBUTING.md) before making any PRs.
