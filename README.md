@@ -42,8 +42,7 @@ See the [API Reference](http://github.com/xogroup/helm-chart-s3-publisher/blob/m
 
 ### Examples
 
-Check out the [Examples]
-(http://github.com/xogroup/helm-chart-s3-publisher/blob/master/Example.md).
+Check out the [Examples](http://github.com/xogroup/helm-chart-s3-publisher/blob/master/Example.md).
 
 ## Contributing
 
