@@ -1,4 +1,4 @@
-#helm-chart-s3-publisher
+# helm-chart-s3-publisher
 A web server to broker the upkeeping of chart objects and helm index manifest grooming between your CI build process.  
 
 Lead Maintainer: [Lam Chan](https://github.com/lamchakchan)
