@@ -1,0 +1,33 @@
+{
+  "name": "helm-chart-s3-publisher",
+  "version": "0.0.1",
+  "description": "A publishing agent to push Helm/Chart packages to a Chart repository",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "lab test"
+  },
+  "author": "Lam Chan",
+  "license": "BSD-3-Clause",
+  "engines": {
+    "node": ">=6.x.x"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.29.0",
+    "bluebird": "3.x.x",
+    "boom": "^4.3.0",
+    "commander": "^2.9.0",
+    "fs-extra": "^2.1.2",
+    "glue": "4.x.x",
+    "good": "^7.1.0",
+    "good-console": "^6.4.0",
+    "good-squeeze": "^5.0.1",
+    "hapi": "16.x.x"
+  },
+  "devDependencies": {
+    "code": "^4.0.0",
+    "doctoc": "1.x.x",
+    "eslint-config-hapi": "^10.0.0",
+    "eslint-plugin-hapi": "^4.0.0",
+    "lab": "^11.2.2"
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "host" : "0.0.0.1",
+    "port" : 8070,
+    "accessKey" : "xyz09876cba",
+    "secretKey" : "abc67890zyx",
+    "bucket" : "test-bucket-2"
+}
