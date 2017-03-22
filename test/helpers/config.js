@@ -25,7 +25,7 @@ describe('configuration', () => {
 
         it('should return safe defaults', (done) => {
 
-            expect(config.get('host')).to.be.equal('127.0.0.1');
+            expect(config.get('host')).to.be.equal('0.0.0.0');
             expect(config.get('port')).to.be.equal(8080);
             expect(config.get('accessKey')).to.be.null();
             expect(config.get('secretKey')).to.be.null();

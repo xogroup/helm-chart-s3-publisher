@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- '6'
+- node
+sudo: required
+services:
+- docker
+before_install:
+- npm install -g npm@'>=2.13.5'
+script: npm run build-test
+deploy:
+  provider: npm
+  email: xo-npm.group@xogrp.com
+  api_key:
+    secure: Vtj1etrDCFuLVT/1zdHffxZBLAa6cvpNBwnvN95UVWKrdsCyd1oQYov7vr9vsIZaPF2ETWyFnqLOvRgzMgB7TiqGgNvuftDR5ZQ3jewshgVB5WXx2pdgeBg/30ZwanBVRegSlaX2/OnoJxNRendvJzl7hhoQS50OgeL4e3GuKWa3XEYt241cPEy0je3FSNODnRv7kilb0pI7nBwxRqcPcM7ouB5p5wIGCdHFbVzAdSvpK9tT4WNybVaDnE3Km6SRP8aDrOgxuxoVnnD97x+uxdOW+/rjxNDyiiBxhO06uDsbjmZA29ReNJVng2MFLYuOMtvlTK8m2MeYbVpZlOhLf32MRHQzJSawNR4k38jwrQExLIp/XOlaziEfpSF/pmKv0NJuL362Spg/Ps3ZOb/Ov1XGRcWGrg0A4nlZu0/X5syaREy1mOFjv27KYkNBhadwtJ3tPQGySBcTGbo5PJsCOAyphWuzdojwYZDehdvBv1HpcjuCBMvvV8ckuQ/S5CXGWGBZHJp1Ev1swKv8bb5O5es/t6FHm2PWJcjLWr6kyvjAoic6F8h3QSUR+d3Yqf8+Lu3HCRny1GZHdS3jXhg4SdBsuhjM+bMGQHyxphXB9kd4kOPzeVwfyKfQa0D/kw2G9YmZGfkE+I271iiUdkQD92koJOEnkQJSmZTYx74erYo=
+  on:
+    tags: true
+    repo: xogroup/helm-chart-s3-publisher
