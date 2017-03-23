@@ -1,7 +1,5 @@
 # Examples
 
-All examples shown leverages the core `BunnyBus` [API](http://github.com/xogroup/bunnybus/blob/master/API.md).  Check the documentation there for inquiries for how payloads and configuration should be provided.
-
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
@@ -83,7 +81,7 @@ index.yaml
 ## Uploading a new chart to S3 under a `qa` prefix
 
 ```
-curl -i -X POST -F repo=qa -F chart=@/home/bob/prometheus-0.1.0.tgz http://localhost:8080/charts
+curl -i -X POST -F subRepo=qa -F chart=@/home/bob/prometheus-0.1.0.tgz http://localhost:8080/charts
 ```
 
 Will result in your S3 bucket having these new files
