@@ -44,7 +44,7 @@ The configuration file is in JSON format.
     "accessKey" : "<AWS access key>",
     "secretKey" : "<AWS secret key>",
     "region" : "<AWS region>",
-    "bucket" : "<AWS S3 bucket">",
+    "bucket" : "<AWS S3 bucket>",
     "port" : "8080",
     "host" : "127.0.0.1"
 }
