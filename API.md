@@ -34,6 +34,7 @@
 - `-P, --port <port>` - port to listen with (defaults to `8080`). *[integer]*
 - `-r, --region <string>` - AWS region (defaults to `us-east-1`. *[string]*
 - `-f, --file <path>` - Path to [configuration file](#configuration-file). *[string]*
+- `-u, --url <string>`, host + path Url to build the canonical chart link with. *[string]*
 
 ## Configuration File
 
@@ -46,7 +47,8 @@ The configuration file is in JSON format.
     "region" : "<AWS region>",
     "bucket" : "<AWS S3 bucket>",
     "port" : "8080",
-    "host" : "127.0.0.1"
+    "host" : "127.0.0.1",
+    "url" : "https://s3.amazonaws.com/your-bucket"
 }
 ```
 
@@ -58,6 +60,7 @@ The configuration file is in JSON format.
 - `BUCKET` - AWS S3 Bucket *[string]*.
 - `HOST` - host address to listen with. *[string]*
 - `PORT` - port to listen with. *[integer]*
+- `URL` - host + path Url to build the canonical chart link with. *[string]*
 
 ## Endpoints
 
