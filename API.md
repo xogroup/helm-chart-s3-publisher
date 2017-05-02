@@ -34,7 +34,7 @@
 - `-P, --port <port>` - port to listen with (defaults to `8080`). *[integer]*
 - `-r, --region <string>` - AWS region (defaults to `us-east-1`. *[string]*
 - `-f, --file <path>` - Path to [configuration file](#configuration-file). *[string]*
-- `-u, --url <string>`, host + path Url to build the canonical chart link with. *[string]*
+- `-u, --url <string>`, host + path Url to build the canonical chart link with. Defaults to _https://s3.amazonaws.com/<bucket>_ *[string]*
 
 ## Configuration File
 
