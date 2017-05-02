@@ -10,7 +10,7 @@ WORKDIR $APPDIR
 ENTRYPOINT ["docker-shell"]
 
 RUN \
-    curl https://kubernetes-helm.storage.googleapis.com/helm-v2.2.2-linux-amd64.tar.gz > /tmp/helm.tar.gz && \
+    curl https://kubernetes-helm.storage.googleapis.com/helm-v2.3.1-linux-amd64.tar.gz > /tmp/helm.tar.gz && \
     tar zxvf /tmp/helm.tar.gz -C /tmp && \
     mv /tmp/linux-amd64/helm /usr/local/bin && \
     rm -rf /tmp/linux-amd64 && rm /tmp/helm.tar.gz
