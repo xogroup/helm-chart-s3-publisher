@@ -10,9 +10,9 @@
 - [Configuration File](#configuration-file)
 - [Environment Variables](#environment-variables)
 - [Endpoints](#endpoints)
-  - [`POST /charts`](#post-charts)
+  - [`POST /chart`](#post-chart)
     - [Form Parameters](#form-parameters)
-  - [`PUT /charts`](#put-charts)
+  - [`PUT /chart`](#put-chart)
     - [Form Parameters](#form-parameters-1)
   - [`POST /index/rebuild`](#post-indexrebuild)
     - [Form Parameters](#form-parameters-2)
@@ -34,7 +34,7 @@
 - `-P, --port <port>` - port to listen with (defaults to `8080`). *[integer]*
 - `-r, --region <string>` - AWS region (defaults to `us-east-1`. *[string]*
 - `-f, --file <path>` - Path to [configuration file](#configuration-file). *[string]*
-- `-u, --url <string>`, host + path Url to build the canonical chart link with. Defaults to _https://s3.amazonaws.com/<bucket>_ *[string]*
+- `-u, --url <string>`, host + path Url to build the canonical chart link with. Defaults to _https://s3.amazonaws.com/<bucket>/<subRepo>_ *[string]*
 
 ## Configuration File
 
@@ -64,7 +64,7 @@ The configuration file is in JSON format.
 
 ## Endpoints
 
-### `POST /charts`
+### `POST /chart`
 Allows you to post new charts to the repository.  If the name of the uploaded chart matches one in S3, the call will fail.  This call will also update the `index.yaml` manifest.
 
 #### Form Parameters
@@ -72,10 +72,10 @@ Allows you to post new charts to the repository.  If the name of the uploaded ch
 - `chart` - content of the file *[file]* **Required**
 
 ```
-curl -i -X POST -F repo=qa -F chart=@/home/bob/prometheus-0.1.0.tgz http://localhost:8080/charts
+curl -i -X POST -F repo=qa -F chart=@/home/bob/prometheus-0.1.0.tgz http://localhost:8080/chart
 ```
 
-### `PUT /charts`
+### `PUT /chart`
 Allows you to update an existing chart to the repository.  This call will also update the `index.yaml` manifest.
 
 #### Form Parameters
@@ -83,7 +83,7 @@ Allows you to update an existing chart to the repository.  This call will also u
 - `chart` - content of the file *[file]* **Required**
 
 ```
-curl -i -X PUT -F repo=qa -F chart=@/home/bob/prometheus-0.1.0.tgz http://localhost:8080/charts
+curl -i -X PUT -F repo=qa -F chart=@/home/bob/prometheus-0.1.0.tgz http://localhost:8080/chart
 ```
 
 ### `POST /index/rebuild`
