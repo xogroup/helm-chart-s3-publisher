@@ -16,6 +16,10 @@
     - [Form Parameters](#form-parameters-1)
   - [`POST /index/rebuild`](#post-indexrebuild)
     - [Form Parameters](#form-parameters-2)
+  - [`GET /{subRepo?}/index.yaml`](#get-subrepoindexyaml)
+    - [Path segments](#path-segments)
+  - [`GET /{subRepo?}/{chartName}.tgz`](#get-subrepochartnametgz)
+    - [Path segments](#path-segments-1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -97,4 +101,31 @@ Allows for a full rebuild of the `index.yaml` file.  If the manifest is out of s
 curl -X POST -F subRepo=qa http://localhost:8080/index/rebuild
 ```
 
+### `GET /{subRepo?}/index.yaml`
+Allows for retrieval of the charts manifest file.
 
+#### Path segments
+- `subRepo` - name of the prefix / subfolder used to push a previous chart *[string]* **Optional**
+
+```
+# No use of subRepo
+curl -v -X GET http://localhost:8080/index.yaml
+
+# Use of subRepo named qa
+curl -v -X GET http://localhost:8080/qa/index.yaml
+```
+
+### `GET /{subRepo?}/{chartName}.tgz`
+Allows for retrieval of the charts manifest file.
+
+#### Path segments
+- `subRepo` - name of the prefix / subfolder used to push a previous chart *[string]* **Optional**
+- `chartName` - name of the chart *[string]* **Required**
+
+```
+# No use of subRepo
+curl -v -X GET http://localhost:8080/influxdb-1.1.1.tgz
+
+# Use of subRepo named qa
+curl -v -X GET http://localhost:8080/qa/influxdb-1.1.1.tgz
+```
