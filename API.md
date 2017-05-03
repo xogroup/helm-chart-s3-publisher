@@ -39,7 +39,8 @@
 - `-P, --port <port>` - port to listen with (defaults to `8080`). *[integer]*
 - `-r, --region <string>` - AWS region (defaults to `us-east-1`. *[string]*
 - `-f, --file <path>` - Path to [configuration file](#configuration-file). *[string]*
-- `-u, --url <string>`, host + path Url to build the canonical chart link with. Defaults to _https://s3.amazonaws.com/<bucket>/<subRepo>_ *[string]*
+- `-u, --url <string>`- host + path Url to build the canonical chart link with. Defaults to _https://s3.amazonaws.com/<bucket>/<subRepo>_ *[string]*
+- `-c, --canacl <string>`- AWS S3 Canned ACL (private, public-read, public-read-write, etc...).  Defaults to `public-read` *[string]*
 
 ## Configuration File
 
@@ -51,6 +52,7 @@ The configuration file is in JSON format.
     "secretKey" : "<AWS secret key>",
     "region" : "<AWS region>",
     "bucket" : "<AWS S3 bucket>",
+    "canacl" : "private",
     "port" : "8080",
     "host" : "127.0.0.1",
     "url" : "https://s3.amazonaws.com/your-bucket"
@@ -59,10 +61,11 @@ The configuration file is in JSON format.
 
 ## Environment Variables
 
-- `ACCESSKEY` - AWS access key *[string]*'.
-- `SECRETKEY` - AWS secret key *[string]*.
-- `REGION` - AWS region (defaults to `us-east-1`. *[string]*
-- `BUCKET` - AWS S3 Bucket *[string]*.
+- `ACCESSKEY` - AWS access key *[string]*
+- `SECRETKEY` - AWS secret key *[string]*
+- `REGION` - AWS region (defaults to `us-east-1`) *[string]*
+- `BUCKET` - AWS S3 Bucket *[string]*
+- `CANACL` - AWS S3 Canned ACL *[string]*
 - `HOST` - host address to listen with. *[string]*
 - `PORT` - port to listen with. *[integer]*
 - `URL` - host + path Url to build the canonical chart link with. *[string]*
