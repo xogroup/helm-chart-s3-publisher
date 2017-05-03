@@ -99,7 +99,6 @@ Allows for a full rebuild of the `index.yaml` file.  If the manifest is out of s
 
 #### Form Parameters
 - `subRepo` - name of the prefix / subfolder to push the chart into *[string]* **Optional**
-- `chart` - content of the file *[file]* **Required**
 
 ```
 curl -X POST -F subRepo=qa http://localhost:8080/index/rebuild
