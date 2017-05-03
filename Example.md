@@ -68,7 +68,7 @@ docker run xogroup/helm-chart-s3-publisher -a 123xyz099 -s 098abc211 -b chart-re
 ## Uploading a new chart to S3
 
 ```
-curl -i -X POST -F chart=@/home/bob/prometheus-0.1.0.tgz http://localhost:8080/charts
+curl -i -X POST -F chart=@/home/bob/prometheus-0.1.0.tgz http://localhost:8080/chart
 ```
 
 Will result in your S3 bucket having these new files
@@ -81,7 +81,7 @@ index.yaml
 ## Uploading a new chart to S3 under a `qa` prefix
 
 ```
-curl -i -X POST -F subRepo=qa -F chart=@/home/bob/prometheus-0.1.0.tgz http://localhost:8080/charts
+curl -i -X POST -F subRepo=qa -F chart=@/home/bob/prometheus-0.1.0.tgz http://localhost:8080/chart
 ```
 
 Will result in your S3 bucket having these new files
