@@ -20,6 +20,7 @@
     - [Path segments](#path-segments)
   - [`GET /{subRepo?}/{chartName}.tgz`](#get-subrepochartnametgz)
     - [Path segments](#path-segments-1)
+  - [`GET /healthy`](#get-healthy)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -128,4 +129,11 @@ curl -v -X GET http://localhost:8080/influxdb-1.1.1.tgz
 
 # Use of subRepo named qa
 curl -v -X GET http://localhost:8080/qa/influxdb-1.1.1.tgz
+```
+
+### `GET /healthy`
+Simple healthy check endpoint.
+
+```
+curl -v -X GET http://localhost:8080/healhty
 ```
