@@ -1,3 +1,4 @@
+sudo: required
 language: node_js
 node_js:
 - '6'
@@ -10,6 +11,15 @@ before_install:
 script:
 - npm test
 - npm run build-docker
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "$TRAVIS_TAG" ]; then
+    docker build -t xogroup/helm-chart-s3-publisher:latest -t xogroup/helm-chart-s3-publisher:$TRAVIS_TAG .;
+    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    docker push xogroup/helm-chart-s3-publisher;
+    echo "Built to DockerHub";
+    else
+    echo "Skipping deployment with the dockerhub provider because this is not a tagged commit";
+    fi
 deploy:
   provider: npm
   email: xo-npmjs.group@xogrp.com
