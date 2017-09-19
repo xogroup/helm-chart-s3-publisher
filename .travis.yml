@@ -9,7 +9,7 @@ services:
 before_install:
 - npm install -g npm@'>=2.13.5'
 script:
-- npm testgit 
+- npm test
 after_success:
   - if [ "$TRAVIS_BRANCH" == "$TRAVIS_TAG" ]; then
     docker build -t xogroup/helm-chart-s3-publisher:latest -t xogroup/helm-chart-s3-publisher:$TRAVIS_TAG .;
